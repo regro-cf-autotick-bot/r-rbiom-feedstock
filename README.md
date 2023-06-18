@@ -1,11 +1,22 @@
+About r-rbiom-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rbiom-feedstock/blob/main/LICENSE.txt)
+
 About r-rbiom
-=============
+-------------
 
 Home: https://cmmr.github.io/rbiom/index.html
 
 Package license: AGPL-3.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rbiom-feedstock/blob/main/LICENSE.txt)
+Summary: A toolkit for working with Biological Observation Matrix ('BIOM') files. Features include reading/writing all 'BIOM' formats, rarefaction, alpha diversity, beta diversity (including 'UniFrac'), summarizing counts by taxonomic level, and sample subsetting. Standalone functions for reading, writing, and subsetting phylogenetic trees are also provided. All CPU intensive operations are encoded in C with multi-thread support.
+About r-rbiom
+-------------
+
+Home: https://cmmr.github.io/rbiom/index.html
+
+Package license: AGPL-3.0-only
 
 Summary: A toolkit for working with Biological Observation Matrix ('BIOM') files. Features include reading/writing all 'BIOM' formats, rarefaction, alpha diversity, beta diversity (including 'UniFrac'), summarizing counts by taxonomic level, and sample subsetting. Standalone functions for reading, writing, and subsetting phylogenetic trees are also provided. All CPU intensive operations are encoded in C with multi-thread support.
 
@@ -27,38 +38,38 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_r_base4.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13982&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=linux&configuration=linux_64_r_base4.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_r_base4.2</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13982&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=linux&configuration=linux_64_r_base4.2" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.2" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_r_base4.1</td>
+              <td>linux_64_r_base4.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13982&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=osx&configuration=osx_64_r_base4.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_r_base4.2</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13982&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=osx&configuration=osx_64_r_base4.2" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13982&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13982&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=win&configuration=win_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rbiom-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
