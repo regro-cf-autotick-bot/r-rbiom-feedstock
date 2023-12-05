@@ -23,6 +23,15 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-plyr                     # [build_platform != target_platform]
+    - r-magrittr                 # [build_platform != target_platform]
+    - r-slam                     # [build_platform != target_platform]
+    - r-openxlsx                 # [build_platform != target_platform]
+    - r-r.utils                  # [build_platform != target_platform]
+    - r-rjson                    # [build_platform != target_platform]
+    - r-rcpp                     # [build_platform != target_platform]
+    - r-rcppparallel             # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
