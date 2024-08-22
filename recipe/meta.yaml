@@ -1,7 +1,6 @@
 {% set version = "1.0.3" %}
 
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-rbiom
@@ -14,8 +13,7 @@ source:
   sha256: 8f7d1c380148022ea677066fd57757a967eff1ac36cfb82b827f913b7450d58e
 
 build:
-  merge_build_host: true  # [win]
-  number: 2
+  number: 3
 
   rpaths:
     - lib/R/lib/
@@ -33,7 +31,9 @@ requirements:
     - r-rcpp                     # [build_platform != target_platform]
     - r-rcppparallel             # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -56,7 +56,6 @@ requirements:
 
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-r.utils
     - r-rcpp
     - r-rcppparallel
