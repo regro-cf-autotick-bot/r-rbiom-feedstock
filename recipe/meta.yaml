@@ -1,5 +1,4 @@
 {% set version = "2.0.7" %}
-
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -14,22 +13,38 @@ source:
 
 build:
   number: 0
-
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-plyr                     # [build_platform != target_platform]
-    - r-magrittr                 # [build_platform != target_platform]
-    - r-slam                     # [build_platform != target_platform]
-    - r-openxlsx                 # [build_platform != target_platform]
-    - r-r.utils                  # [build_platform != target_platform]
-    - r-rjson                    # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
-    - r-rcppparallel             # [build_platform != target_platform]
+    - r-rcppthread               # [build_platform != target_platform]
+    - r-ape                      # [build_platform != target_platform]
+    - r-broom                    # [build_platform != target_platform]
+    - r-cluster                  # [build_platform != target_platform]
+    - r-dplyr                    # [build_platform != target_platform]
+    - r-emmeans                  # [build_platform != target_platform]
+    - r-fillpattern              # [build_platform != target_platform]
+    - r-ggnewscale               # [build_platform != target_platform]
+    - r-ggplot2                  # [build_platform != target_platform]
+    - r-ggtext                   # [build_platform != target_platform]
+    - r-jsonlite                 # [build_platform != target_platform]
+    - r-magrittr                 # [build_platform != target_platform]
+    - r-mgcv                     # [build_platform != target_platform]
+    - r-pillar                   # [build_platform != target_platform]
+    - r-plyr                     # [build_platform != target_platform]
+    - r-readr                    # [build_platform != target_platform]
+    - r-readxl                   # [build_platform != target_platform]
+    - r-slam                     # [build_platform != target_platform]
+    - r-tidyplots                # [build_platform != target_platform]
+    - r-vegan                    # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
@@ -41,29 +56,52 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-
   host:
     - r-base
-    - r-r.utils
     - r-rcpp
-    - r-rcppparallel
+    - r-rcppthread
+    - r-ape
+    - r-broom
+    - r-cluster
+    - r-dplyr
+    - r-emmeans
+    - r-fillpattern
+    - r-ggnewscale
+    - r-ggplot2
+    - r-ggtext
+    - r-jsonlite
     - r-magrittr
-    - r-openxlsx
+    - r-mgcv
+    - r-pillar
     - r-plyr
-    - r-rjson
+    - r-readr
+    - r-readxl
     - r-slam
-
+    - r-tidyplots
+    - r-vegan
   run:
     - r-base
-    - r-r.utils
     - r-rcpp
-    - r-rcppparallel
+    - r-rcppthread
+    - r-ape
+    - r-broom
+    - r-cluster
+    - r-dplyr
+    - r-emmeans
+    - r-fillpattern
+    - r-ggnewscale
+    - r-ggplot2
+    - r-ggtext
+    - r-jsonlite
     - r-magrittr
-    - r-openxlsx
+    - r-mgcv
+    - r-pillar
     - r-plyr
-    - r-rjson
+    - r-readr
+    - r-readxl
     - r-slam
+    - r-tidyplots
+    - r-vegan
 
 test:
   commands:
@@ -71,15 +109,13 @@ test:
     - "\"%R%\" -e \"library('rbiom')\""  # [win]
 
 about:
-  home: https://cmmr.github.io/rbiom/index.html
-
-  license: AGPL-3.0-only
-  license_family: AGPL
+  home: https://cmmr.github.io/rbiom/, https://github.com/cmmr/rbiom
+  license: MIT
+  summary: A toolkit for working with Biological Observation Matrix ('BIOM') files. Read/write all 'BIOM' formats. Compute rarefaction, alpha diversity, and beta diversity (including 'UniFrac'). Summarize counts by taxonomic level. Subset based on metadata. Generate visualizations and statistical analyses. CPU intensive operations are coded in C++ for speed.
+  license_family: MIT
   license_file:
-    - {{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3
-
-  summary: A toolkit for working with Biological Observation Matrix ('BIOM') files. Features include reading/writing all 'BIOM' formats, rarefaction, alpha diversity, beta diversity (including 'UniFrac'), summarizing counts by taxonomic level, and sample subsetting. Standalone functions for reading, writing, and subsetting
-    phylogenetic trees are also provided. All CPU intensive operations are encoded in C with multi-thread support.
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
