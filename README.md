@@ -7,20 +7,20 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rbiom-feedsto
 About r-rbiom
 -------------
 
-Home: https://cmmr.github.io/rbiom/index.html
+Home: https://cmmr.github.io/rbiom/, https://github.com/cmmr/rbiom
 
-Package license: AGPL-3.0-only
+Package license: MIT
 
-Summary: A toolkit for working with Biological Observation Matrix ('BIOM') files. Features include reading/writing all 'BIOM' formats, rarefaction, alpha diversity, beta diversity (including 'UniFrac'), summarizing counts by taxonomic level, and sample subsetting. Standalone functions for reading, writing, and subsetting phylogenetic trees are also provided. All CPU intensive operations are encoded in C with multi-thread support.
+Summary: A toolkit for working with Biological Observation Matrix ('BIOM') files. Read/write all 'BIOM' formats. Compute rarefaction, alpha diversity, and beta diversity (including 'UniFrac'). Summarize counts by taxonomic level. Subset based on metadata. Generate visualizations and statistical analyses. CPU intensive operations are coded in C++ for speed.
 
 About r-rbiom
 -------------
 
-Home: https://cmmr.github.io/rbiom/index.html
+Home: https://cmmr.github.io/rbiom/, https://github.com/cmmr/rbiom
 
-Package license: AGPL-3.0-only
+Package license: MIT
 
-Summary: A toolkit for working with Biological Observation Matrix ('BIOM') files. Features include reading/writing all 'BIOM' formats, rarefaction, alpha diversity, beta diversity (including 'UniFrac'), summarizing counts by taxonomic level, and sample subsetting. Standalone functions for reading, writing, and subsetting phylogenetic trees are also provided. All CPU intensive operations are encoded in C with multi-thread support.
+Summary: A toolkit for working with Biological Observation Matrix ('BIOM') files. Read/write all 'BIOM' formats. Compute rarefaction, alpha diversity, and beta diversity (including 'UniFrac'). Summarize counts by taxonomic level. Subset based on metadata. Generate visualizations and statistical analyses. CPU intensive operations are coded in C++ for speed.
 
 Current build status
 ====================
